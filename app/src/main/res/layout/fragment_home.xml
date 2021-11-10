@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_detection"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardElevation="0dp"
+        android:elevation="0dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/cv_detection">
+
+
+                <ImageButton
+                    android:id="@+id/fl_detection"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/ic_power_off"
+                    android:layout_margin="12dp"
+                    android:clickable="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_detection"
+                    />
+
+            <ImageButton
+                android:id="@+id/fl_disable"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="@drawable/ic_power"
+                android:visibility="invisible"
+                android:clickable="true"
+                android:layout_margin="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/tv_detection"
+                />
+
+            <TextView
+                android:id="@+id/tv_detection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Appuyer pour activer la détection"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="27sp"
+                android:layout_marginTop="10dp"
+                style="@style/RobotoTextViewStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

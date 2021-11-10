@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.boughaba.abnormaldetection">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_detection"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_detection"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AbnormalDetection">
+        <activity
+            android:name=".AbnormalDetection"
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".ui.contact.AddContactActivity"
+            android:label="Créer un nouveau contact"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".ui.contact.ModifyContactActivity"
+            android:label="Modifier les informations du contact"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".ui.user.DetailsUserActivity"
+            android:label="Informations personnelles"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".ui.user.EditUserActivity"
+            android:label="Modifier vos informations personnelles"
+            android:parentActivityName=".ui.user.DetailsUserActivity" />
+        <activity
+            android:name=".ui.alarm.EditAlarmActivity"
+            android:label="Réglage de l'alarme"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".ui.register.RegisterUseActivity"
+            android:label="Enregistrer vos informations" />
+
+        <activity
+            android:name=".alarm.AlarmActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensorPortrait"
+            android:showOnLockScreen="true"
+            android:taskAffinity=""
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"></activity>
+
+        <service
+            android:name=".service.SensorService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":ServiceProcess" />
+
+    </application>
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+</manifest>
